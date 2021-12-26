@@ -32,7 +32,7 @@ app.post("/",function(req,res){
   const url="https://us20.api.mailchimp.com/3.0/lists/99b9a4888c";
   const options={
     method:"POST",
-    auth:"arpit045:0dbf56d55fb86eb05d2835c070f3bddf-us20"
+    auth:"arpit:Api" //the api key hidden
   }
   const request = https.request(url,options,function(response){
     console.log(response.statusCode);
@@ -61,8 +61,3 @@ app.post("/failure",function(req,result){
 app.listen(process.env.PORT || 3000, function(){
   console.log("server is running on 3000");
 });
-
-
-
-// api key = 0dbf56d55fb86eb05d2835c070f3bddf-us20
-// list id=99b9a4888c
